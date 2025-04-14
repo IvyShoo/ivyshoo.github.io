@@ -929,6 +929,12 @@ footer {
     width: 500px;
   }
 }
+@media (min-width: 992px) and (orientation: landscape) {
+  .title-footer {
+    top: 15%;
+    left: 56%;
+  }
+}
 @media (min-width: 1200px) {
   .title-footer {
     top: 15%;
@@ -974,6 +980,12 @@ footer {
   .footer-guy {
     width: 380px;
     height: 380px;
+  }
+}
+@media (min-width: 992px) and (orientation: landscape) {
+  .footer-guy {
+    top: 15%;
+    left: 44%;
   }
 }
 @media (min-width: 1200px) {
@@ -1127,6 +1139,11 @@ footer {
     transform: unset;
   }
 }
+@media (min-width: 992px) and (orientation: landscape) {
+  .contact-info {
+    top: 58%;
+  }
+}
 @media (min-width: 1200px) {
   .contact-info {
     top: 69%;
@@ -1261,6 +1278,12 @@ footer {
     top: 86%;
   }
 }
+@media (min-width: 992px) and (orientation: landscape) {
+  .balloon {
+    left: 83%;
+    top: 74%;
+  }
+}
 @media (min-width: 1200px) {
   .balloon {
     left: 88%;
@@ -1289,6 +1312,11 @@ footer {
 @media (min-width: 992px) {
   .balloon:hover {
     top: 84%;
+  }
+}
+@media (min-width: 992px) and (orientation: landscape) {
+  .balloon:hover {
+    top: 72%;
   }
 }
 @media (min-width: 1200px) {
@@ -1407,9 +1435,16 @@ header {
     left: 80px;
   }
 }
+@media (min-width: 992px) and (orientation: landscape) {
+  .title-small {
+    top: 40px;
+    left: 10px;
+  }
+}
 @media (min-width: 1200px) {
   .title-small {
     top: 90px;
+    left: 80px;
   }
 }
 @media (min-width: 1400px) {
@@ -1452,10 +1487,17 @@ header {
     left: 80px;
   }
 }
+@media (min-width: 992px) and (orientation: landscape) {
+  .title {
+    top: 0px;
+    left: 10px;
+  }
+}
 @media (min-width: 1200px) {
   .title {
     top: 70px;
     width: 540px;
+    left: 80px;
   }
 }
 @media (min-width: 1400px) {
@@ -1543,6 +1585,12 @@ header {
   .title-photos {
     top: 380px;
     left: 210px;
+  }
+}
+@media (min-width: 992px) and (orientation: landscape) {
+  .title-photos {
+    top: -67px;
+    left: 365px;
   }
 }
 @media (min-width: 1200px) {
