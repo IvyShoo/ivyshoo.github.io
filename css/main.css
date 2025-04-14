@@ -870,6 +870,13 @@ h2 {
     height: 60px;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
 footer {
   min-height: 105svh;
   width: 100vw;
