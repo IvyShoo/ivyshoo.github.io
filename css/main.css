@@ -270,9 +270,9 @@ nav {
   height: 12px;
   border-radius: 50%;
   background-color: #cbd900;
-  margin-right: 20px;
   position: relative;
-  top: 22px;
+  top: 21px;
+  margin-right: 20px;
 }
 @media (min-width: 992px) {
   .subtitle-dot {
@@ -292,6 +292,12 @@ nav {
 @media (min-width: 1920px) {
   .subtitle-dot {
     top: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .sbt-dot-1 {
+    display: none;
   }
 }
 
@@ -323,7 +329,17 @@ button:hover {
 .project-mini .project-cta {
   position: absolute;
   top: 350px;
-  left: 210px;
+  left: 265px;
+}
+@media (min-width: 375px) {
+  .project-mini .project-cta {
+    left: 280px;
+  }
+}
+@media (min-width: 412px) {
+  .project-mini .project-cta {
+    left: 300px;
+  }
 }
 @media (min-width: 768px) {
   .project-mini .project-cta {
@@ -2004,6 +2020,10 @@ section {
     padding: 20px 0;
   }
 }
+#about .subtitle {
+  display: flex;
+  flex-direction: row;
+}
 #about .text-sm {
   padding: 20px 0px;
   margin-bottom: 16px;
@@ -2128,13 +2148,46 @@ section {
   transform: translate(-50%, -50%);
 }
 
+.img-special-1 img,
+.img-special-2 img,
+.img-special-3 img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.img-special-2 img {
+  left: -65%;
+}
+@media (min-width: 1200px) {
+  .img-special-2 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.img-special-3 img {
+  left: -62%;
+}
+@media (min-width: 992px) {
+  .img-special-3 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .project-set {
   display: flex;
   justify-content: center;
   flex-direction: column;
   column-gap: 80px;
-  margin-bottom: 160px;
-  padding: 70px 0 40px 0;
+  margin-bottom: 120px;
+  padding: 30px 20px;
   background-color: rgba(0, 0, 0, 0.4784313725);
 }
 @media (min-width: 768px) {
@@ -2145,6 +2198,8 @@ section {
 @media (min-width: 1200px) {
   .project-set {
     flex-direction: row;
+    padding: 70px 0 40px 0;
+    margin-bottom: 160px;
   }
 }
 @media (min-width: 1920px) {
@@ -2154,8 +2209,7 @@ section {
 }
 
 .project-mini {
-  width: 240px;
-  margin: 0 auto 60px auto;
+  margin: 0 0 60px 0;
   position: relative;
   border-radius: 20px;
   padding: 0;
@@ -2163,6 +2217,7 @@ section {
 @media (min-width: 768px) {
   .project-mini {
     width: 400px;
+    margin: 0 auto 60px auto;
   }
 }
 @media (min-width: 1200px) {
