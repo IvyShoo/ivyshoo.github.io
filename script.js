@@ -35,7 +35,7 @@ AOS.init();
 
 
 // GSAP LETTER DOT SCROLL ANIMATION .................................................................
-gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, Flip);
 
 let matchMedia = gsap.matchMedia();
 
@@ -157,6 +157,69 @@ let letterDot1 = gsap.timeline({
 
 
 
+//  CLICK TO ENLARGE: IMG GALLERY
+const images = document.querySelectorAll('.img-click');
+const lightbox = document.querySelector('.lightbox');
+const imgMain = document.querySelector('.lightbox img');
+const arrowL = document.querySelector('.arrow-left');
+const arrowD = document.querySelector('.arrow-right');
+
+let imgIndex = 0;
+
+// opening lightbox
+images.forEach(img => {
+      img.addEventListener('click', e => {
+            imgMain.src = e.target.src;
+            imgIndex = [...images].indexOf(img);
+
+            lightbox.classList.toggle('hide');
+            // setTimeout(() => {
+            //       lightbox.style.opacity = "1";
+            // }, 100);
+      });
+});
+
+
+// closing lightbox - outside
+window.addEventListener('click', e => {
+      if(e.target.classList.contains('lightbox')) {
+            
+            lightbox.classList.toggle('hide');
+            // setTimeout(() => {
+            //       lightbox.style.opacity = "0";
+            // }, 300);
+      }
+});
+            // closing lightbox - inside
+            imgMain.addEventListener('click', () => {
+                  lightbox.classList.toggle('hide');
+                  // setTimeout(() => {
+                  //       lightbox.style.opacity = "0";
+                  // }, 300);
+
+            })
+
+// prev - next
+arrowL.addEventListener('click', () => {
+      imgIndex--;
+      if (imgIndex < 0) {
+            imgIndex = images.length -1;
+      }
+      imgMain.src = images[imgIndex].src;
+});
+arrowD.addEventListener('click', () => {
+      imgIndex++;
+      if (imgIndex > images.length -1) {
+            imgIndex = 0;
+      }
+      imgMain.src = images[imgIndex].src;
+});
+
+
+
+
+
+
 
 // COPY TO CLIPBOARD ..............................................................
 const copyButton = document.querySelector('.btn-copy');
@@ -184,5 +247,6 @@ clickCopy.addEventListener('click', () => {
 
 
 // CURRENT YEAR .................................................................
-$('#year').text(new Date().getFullYear());
+// $('#year').text(new Date().getFullYear());
+document.getElementById('year').innerHTML = new Date().getFullYear();
 
