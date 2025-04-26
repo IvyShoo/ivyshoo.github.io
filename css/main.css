@@ -772,6 +772,10 @@ h2 {
   color: #ebebeb;
 }
 
+.italic {
+  font-style: italic;
+}
+
 @keyframes mobile {
   0% {
     transform: rotate(-5deg);
